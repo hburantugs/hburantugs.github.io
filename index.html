@@ -12,9 +12,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
 	</head>
 	<body>
-
+	
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->
@@ -29,16 +31,16 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="https://www.youtube.com/watch?v=xefpHEg5UIA">Төрсөн өдрийн мэнд хүргье.</a></li>
+								<li><a href="#" onclick="document.getElementById('track').muted = !document.getElementById('track').muted;$(this).toggleClass('mute')">Төрсөн өдрийн мэнд хүргье.</a></li>
 								
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
-						
+						<audio autoplay="autoplay" id="track" muted>
+						<source src="sound.mp3" type="audio/ogg"/>
+						</audio>
 					</header>
-						<audio autoplay loop controls id="playAudio">
-      <source src="sound.mp3">
-    </audio>
+						
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; <a href="https://fb.com/stmtaylor">Тэмүүжингээс</a> 2019.09.27</p>
