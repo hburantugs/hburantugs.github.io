@@ -13,11 +13,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script>
-window.onload = function() {
-  var context = new AudioContext();
-}
-</script>
+		
 	
 	</head>
 	<body>
@@ -36,15 +32,20 @@ window.onload = function() {
 						</div>
 						<nav>
 							<ul>
-								<li><a onclick="document.getElementById('track').muted = !document.getElementById('track').muted;$(this).toggleClass('mute')">Төрсөн өдрийн мэнд хүргье.</a></li>
-								
+								<li><a  onclick="playVid()" type="button">Төрсөн өдрийн мэнд хүргье.</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
-						<iframe src="silence.mp3" allow="autoplay" id="audio" muted style="display: none"></iframe>
-						<audio autoplay="autoplay" id="track" muted controls>
-						<source src="sound.mp3" type="audio/ogg"/>
-						</audio>
+						<audio id="myVideo" controls>
+  <source src="https://hosnavch.github.io/sound.mp3" type="audio/mp3">
+</audio>
+						<script>
+var vid = document.getElementById("myVideo"); 
+
+function playVid() { 
+  return vid.paused ? vid.play() : vid.pause();
+} 
+</script>
 					</header>
 						
 				<!-- Footer -->
