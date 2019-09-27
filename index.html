@@ -13,6 +13,12 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+function playAudio(url) {
+  var a = new Audio(url);
+  a.play();
+}
+</script>
 	
 	</head>
 	<body>
@@ -31,12 +37,13 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#" onclick="document.getElementById('track').muted = !document.getElementById('track').muted;$(this).toggleClass('mute')">Төрсөн өдрийн мэнд хүргье.</a></li>
+								<li><a onclick="document.getElementById('track').muted = !document.getElementById('track').muted;$(this).toggleClass('mute')">Төрсөн өдрийн мэнд хүргье.</a></li>
 								
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
-						<audio autoplay="autoplay" id="track" muted>
+						<iframe src="silence.mp3" allow="autoplay" id="audio" muted style="display: none"></iframe>
+						<audio autoplay="autoplay" id="track" muted controls style="display: none">
 						<source src="sound.mp3" type="audio/ogg"/>
 						</audio>
 					</header>
