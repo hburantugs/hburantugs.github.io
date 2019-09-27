@@ -12,21 +12,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script>
-let audioPlaying = true,
-backgroundAudio,browser;
-browser = navigator.userAgent.toLowerCase();
-$('<audio class="audio1" src="audio.mp3" loop></audio>').prependTo('body');
-if (!browser.indexOf('firefox') > -1) {
-    $('<embed id="background-audio" src="sound.mp3" autostart="1"></embed>').prependTo('body');
-
- backgroundAudio = setInterval(function() {
-      $("#background-audio").remove();
-       $('<embed id="background-audio" src="sound.mp3"></embed>').prependTo('body');
-      }, 120000);
-      //120000 is the duration of your audio which in this case 2 mins.
-}
-</script>
 	</head>
 	<body>
 
@@ -51,7 +36,9 @@ if (!browser.indexOf('firefox') > -1) {
 						</nav>
 						
 					</header>
-						<embed id="background-audio" src="sound.mp3">
+						<audio autoplay loop controls id="playAudio">
+      <source src="sound.mp3">
+    </audio>
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; <a href="https://fb.com/stmtaylor">Тэмүүжингээс</a> 2019.09.27</p>
