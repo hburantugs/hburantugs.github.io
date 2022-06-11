@@ -1091,8 +1091,8 @@
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/35659937_1058396137642633_7561508104651669504_n.jpg");
-			background-position: top;
+			background-image: url("../../images/image1.jpg");
+			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
